@@ -2,9 +2,9 @@
 import RPi.GPIO as GPIO
 import time
 
-SDI   = 24	#data  GPIO-10
-RCLK  = 19	#Latch	GPIO-12
-SRCLK = 21	#Clock	GPIO-13
+SDI   = 21	#data  
+RCLK  = 19	#Latch	
+SRCLK = 24	#Clock	
 
 segCode = [0xc0,0xf9,0xa4,0xb0,0x99,0x92,0x82,0xf8,0x80,0x90,0x88,0x83,0xc6,0xa1,0x86,0x8e]
 
@@ -13,7 +13,7 @@ def print_msg():
 	print 'Please press Ctrl+C to end the program...'
 
 def setup():
-	GPIO.setmode(GPIO.BOARD)    #Number GPIOs by its physical location
+	GPIO.setmode(GPIO.BCM)    #Number GPIOs by its physical location
 	GPIO.setup(SDI, GPIO.OUT)
 	GPIO.setup(RCLK, GPIO.OUT)
 	GPIO.setup(SRCLK, GPIO.OUT)
@@ -48,5 +48,4 @@ if __name__ == '__main__': #Program starting from here
 	try:
 		loop()  
 	except KeyboardInterrupt:  
-		destroy() 
-
+		destroy()
