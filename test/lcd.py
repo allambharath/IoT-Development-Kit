@@ -4,15 +4,14 @@ from time import sleep, strftime
 import Adafruit_CharLCD as LCD
 from datetime import datetime
 #we are calling for DATE
-import SDL_DS1307
 
 # Raspberry Pi pin setup
-lcd_rs = 17  #Board 35
-lcd_en = 37  #Board 37
-lcd_d4 = 33  #Board 35
-lcd_d5 = 7  #Board 35
-lcd_d6 = 31  #Board 35
-lcd_d7 = 29  #Board 35
+lcd_rs = 19  #Board 35
+lcd_en = 26  #Board 37
+lcd_d4 = 13  #Board 33
+lcd_d5 = 4   #Board 7
+lcd_d6 = 6  #Board 31
+lcd_d7 = 5  #Board 29
 lcd_backlight = 2
 
 # Define LCD column and row size for 16x2 LCD.
