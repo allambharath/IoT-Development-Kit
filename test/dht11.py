@@ -3,7 +3,7 @@ import Adafruit_DHT
 
 #Set the type of sensor and the pin for sensor
 sensor = Adafruit_DHT.DHT11
-pin = 4
+pin = 4  #Board p-7
 
 
 while(1):
