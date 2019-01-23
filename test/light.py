@@ -8,15 +8,15 @@ import time
 light = 33 #Board number
 
 def setup():
-    GPIO.setmode(gpio.BOARD)
+    GPIO.setmode(GPIO.BOARD)
     GPIO.setup(light,GPIO.IN)
 
 def read_light():
     while True:
         light_state = GPIO.input(light)
-        if light_state == 1:
+        if light_state == 0:
             print("Light Detected")
-        elif light_state == 0:
+        elif light_state == 1:
             print("Light Not Detected")
         
         time.sleep(.3)
