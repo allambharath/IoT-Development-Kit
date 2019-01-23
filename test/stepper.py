@@ -6,12 +6,12 @@ import RPi.GPIO as GPIO
  
 # Use BCM GPIO references
 # instead of physical pin numbers
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
  
 # Define GPIO signals to use
 # Physical pins 11,15,16,18
 # GPIO17,GPIO22,GPIO23,GPIO24
-StepPins = [6,13,19,26]
+StepPins = [29,31,7,33]
  
 # Set all pins as output
 for pin in StepPins:
@@ -68,3 +68,4 @@ while True:
  
   # Wait before moving on
   time.sleep(WaitTime)
+
