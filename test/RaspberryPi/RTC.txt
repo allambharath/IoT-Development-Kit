@@ -1,0 +1,25 @@
+Step 1:Run sudo nano /boot/config.txt to edit the pi configuration and add your RTC chip:
+ 
+    Add this in the last line of the file
+    dtoverlay =i2c-rtc,ds1307
+ 
+Step2: Save it and run sudo reboot to start again. 
+Log in and run sudo i2cdetect -y 1 and observe the UU
+ 
+Step 3: Disable the "fake hwclock" which interferes with the 'real' hwclock
+sudo apt-get -y remove fake-hwclock
+sudo update-rc.d -f fake-hwclock remove
+sudo systemctl disable fake-hwclock
+Now with the fake-hw clock off, you can start the original 'hardware clock' script.
+ 
+Step 4: Run sudo nano /lib/udev/hwclock-set and comment out these three lines:
+#if [ -e /run/systemd/system ] ; then
+# exit 0
+#fi
+Step 5: When you first plug in the RTC module, it's going to have the wrong time because it has to be set once. 
+You can always read the time directly from the RTC with 
+sudo hwclock -D -r
+Step 6: To set the time in Raspberry pi using RTC Module execute following Command
+	sudo hwclock –w
+Step 7:To read time from RTC Module execute following Command
+	sudo hwclock -r
