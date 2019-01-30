@@ -8,8 +8,8 @@
 */
 // defines pins numbers
 //RM4 and RM21 connected
-const int trigPin = 7;   //trig Arduino pin 21/D7   or Board pi 37
-const int echoPin = 6;   //Echo Arduino pin 20/D6   or Board pi 35
+const int trigPin = 6;   //trig Arduino pin 21/D7   or Board pi 37
+const int echoPin = 7;   //Echo Arduino pin 20/D6   or Board pi 35
 // defines variables
 long duration;
 int distance;
