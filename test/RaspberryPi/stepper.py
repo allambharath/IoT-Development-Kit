@@ -9,9 +9,9 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
  
 # Define GPIO signals to use
-# Physical pins 11,15,16,18
-# GPIO17,GPIO22,GPIO23,GPIO24
-StepPins = [29,31,7,33]
+# Physical pins 23,21,19,24
+# GPIO11,GPIO9,GPIO10,GPIO08
+StepPins = [11,9,10,8]
  
 # Set all pins as output
 for pin in StepPins:
