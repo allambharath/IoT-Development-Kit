@@ -3,8 +3,8 @@ import time
 from ubidots import ApiClient              #Import time library
 GPIO.setmode(GPIO.BCM)                     #Set GPIO pin numbering 
 
-TRIG = 26        #37                          #Associate pin 37  to TRIG
-ECHO = 19        #35                         #Associate pin 35 to ECHO
+TRIG = 19        #37                          #Associate pin 37  to TRIG
+ECHO = 26        #35                         #Associate pin 35 to ECHO
 
 print "Distance measurement in progress"
 
